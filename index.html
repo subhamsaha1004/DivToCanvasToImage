@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exporting from 'div' to canvas to image</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Kelly+Slab|Oleo+Script+Swash+Caps:400,700|Amaranth:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div id="page">
+		<h1>Exporting from 'div' to canvas to image</h1>
+		<div id="content">
+			<p>The below image is a transparent png. It is wrapped inside a 'div' whose background you can select from the dropdown.</p>
+			<p>Selecting a particular color as background will generate an image, with that color set as background, which you can then right click and save as image.</p>
+			<div class="left floatL">
+				<!-- div to convert -->
+				<div class="imgWrapper"><img src="image1.png" alt=""></div>
+
+				<!-- Adding dropdoen to select color -->
+
+				<div class="dropDownWrapper">
+					<p>Select Background of the div:</p>
+					<p class="label"><span class="text">Apply Background</span><span class="dnArrow"></span></p>
+					<ul class="dropDown dispNone">
+						<li data-bkg="#f00">Red</li>
+						<li data-bkg="#00f">Blue</li>
+						<li data-bkg="#ff0">Yellow</li>
+						<li data-bkg="#0f0">Green</li>
+						<li data-bkg="">Reset</li>
+					</ul>
+				</div>
+				<!-- end of dropdown -->
+			</div>
+
+			<div class="right floatR">
+				<!-- Final image -->
+				<div class="finalImg"></div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
